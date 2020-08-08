@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import com.example.transactionmobile.R
 import com.example.transactionmobile.data.User
 import kotlinx.android.synthetic.main.fragment_payment.*
@@ -35,6 +33,8 @@ class PaymentFragment : Fragment() {
             User(login = "juliherms", nomeCompleto = "Juliherms Vasconcelos"),
             User(login = "fred",nomeCompleto = "Fred Vasconcelos")
         )
-        recyclerView.adapter = PaymentAdapter(listof)
+
+        //setter content in my recyclerview
+        recyclerView1.adapter = PaymentAdapter(listof)
     }
 }
