@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.example.transactionmobile.R
-import com.example.transactionmobile.ui.home.HomeViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class DashboardFragment : Fragment() {
