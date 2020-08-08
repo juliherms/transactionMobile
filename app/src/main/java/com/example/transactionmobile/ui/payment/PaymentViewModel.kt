@@ -1,11 +1,11 @@
-package com.example.transactionmobile.ui.dashboard
+package com.example.transactionmobile.ui.payment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class PaymentViewModel : ViewModel() {
 
     init {
         //Function responsible initialize
@@ -13,7 +13,7 @@ class DashboardViewModel : ViewModel() {
     }
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is Payment Fragment"
     }
     val text: LiveData<String> = _text
 }

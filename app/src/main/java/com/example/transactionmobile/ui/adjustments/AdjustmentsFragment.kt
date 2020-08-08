@@ -1,4 +1,4 @@
-package com.example.transactionmobile.ui.dashboard
+package com.example.transactionmobile.ui.adjustments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,9 @@ import androidx.lifecycle.Observer
 import com.example.transactionmobile.R
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class DashboardFragment : Fragment() {
+class AdjustmentsFragment : Fragment() {
 
-    //variable imutable
-    private val dashboardViewModel: DashboardViewModel by viewModel()
+    private val notificationsViewModel: AdjustmentsViewModel by viewModel()
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -21,9 +20,9 @@ class DashboardFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        val root = inflater.inflate(R.layout.fragment_adjustments, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

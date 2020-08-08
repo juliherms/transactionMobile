@@ -1,10 +1,10 @@
-package com.example.transactionmobile.ui.notifications
+package com.example.transactionmobile.ui.adjustments
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class AdjustmentsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"
