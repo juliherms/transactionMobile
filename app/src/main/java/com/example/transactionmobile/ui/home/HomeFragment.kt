@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.transactionmobile.R
+import com.example.transactionmobile.data.UserAuthenticated
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -34,10 +35,15 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view,savedInstanceState)
 
+        if(UserAuthenticated.isUserNotAuthenticated()){
+            goToLogin()
+        }
+    }
+
+    private fun goToLogin(){
         //redirect to login screen
-        val dir = HomeFragmentDirections.actionNavigationHomeToLoginFragment()
+        val dir = HomeFragmentDirections.actionGlobalLoginFragment() //global method
         val controller = findNavController()
         controller.navigate(dir)
-
     }
 }
