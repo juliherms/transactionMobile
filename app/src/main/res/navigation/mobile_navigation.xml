@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_payment" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_adjustments"
         android:name="com.example.transactionmobile.ui.adjustments.AdjustmentsFragment"
         android:label="@string/title_adjustments"
         tools:layout="@layout/fragment_adjustments" />

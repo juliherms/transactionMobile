@@ -21,7 +21,7 @@ class AdjustmentsFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_adjustments, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
+        val textView: TextView = root.findViewById(R.id.text_adjustments)
         notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
