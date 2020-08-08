@@ -10,6 +10,9 @@ import org.koin.core.context.startKoin
  */
 class AppApplication: Application() {
 
+    /**
+     * Override onCreate and configure Koin for DI
+     */
     override fun onCreate() {
         super.onCreate();
         //init koin dependency injection

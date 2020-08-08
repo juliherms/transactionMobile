@@ -5,7 +5,10 @@ import com.example.transactionmobile.ui.home.HomeViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-//Koin responsible to provide dependency injection in the application
+/**
+ * Koin responsible to provide dependency injection in the application
+ * Inject automatic viewModel
+ */
 val viewModelModule = module {
     viewModel { HomeViewModel() }
     viewModel { DashboardViewModel() }
