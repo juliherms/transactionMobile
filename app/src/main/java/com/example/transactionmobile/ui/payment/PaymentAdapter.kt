@@ -8,7 +8,7 @@ import com.example.transactionmobile.R
 import com.example.transactionmobile.data.User
 import kotlinx.android.synthetic.main.item_contact.view.*
 
-class PaymentAdapter(private val users: List<User>) :
+class PaymentAdapter(private val users: List<User>, private val onClick: () -> Unit) :
     RecyclerView.Adapter<PaymentAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -16,6 +16,10 @@ class PaymentAdapter(private val users: List<User>) :
             with(itemView){
                 textView2.text = user.login
                 textView3.text = user.nomeCompleto
+                //set action on click
+                setOnClickListener {
+                    onClick()
+                }
             }
         }
     }

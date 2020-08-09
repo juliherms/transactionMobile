@@ -35,6 +35,8 @@ class PaymentFragment : Fragment() {
         )
 
         //setter content in my recyclerview
-        recyclerView1.adapter = PaymentAdapter(listof)
+        recyclerView1.adapter = PaymentAdapter(listof) {
+
+        }
     }
 }
